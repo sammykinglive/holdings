@@ -1,0 +1,131 @@
+body {
+    background-image: url("images/bg1.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .header-logo img {
+    height: 40px;
+    
+  }
+
+  .header-cta a {
+    background-color: #919F86;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.438);
+    font-weight: 600;
+  }
+  
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+  }
+  
+  .login-content {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+    max-width: 300px;
+    height: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.438);
+    border-radius: 10px;
+  }
+  
+  .login-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .login-content p {
+    margin-bottom: 20px;
+  }
+  
+  .login-form input,
+  .login-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  .login-form button {
+    background-color: #919F86;
+    color: #000000;
+    border: none;
+    padding: 10px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  
+  .login-form p {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .login-form a {
+    color: #242523;
+    text-decoration: underline;
+    
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 20px;
+    color: #000000;
+    font-weight: 600;
+  }
+  
+
+
+  
+/* Media Query for Mobile */
+@media (max-width: 767px) {
+   
+    
+   
+    .header {
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .header-cta {
+      margin-top: 10px;
+    }
+  
+    .login-content {
+      height: auto;
+      padding: 20px;
+    }
+  
+    .login-content h2 {
+      font-size: 20px;
+    }
+  
+    .login-form input,
+    .login-form button {
+      margin-bottom: 15px;
+    }
+  
+    .footer {
+      font-size: 14px;
+    }
+  }
