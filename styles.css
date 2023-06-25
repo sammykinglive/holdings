@@ -1,0 +1,626 @@
+/* Reset default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'montserrat', sans-serif;
+  }
+  
+  
+
+  /* Reset some default styles for the header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    font-family: 'krona one', sans-serif;
+  }
+  
+  /* Style the logo */
+  .logo img {
+    height: 30px; /* Adjust the height as needed */
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .logo img:hover {
+    transform: scale(1.1); /* Adjust the scale factor as desired */
+  }
+  
+  /* Style the navigation links */
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    position: relative;
+    margin-right: 20px; /* Adjust the spacing between the links */
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333; /* Adjust the link color */
+  }
+
+  
+/* Add a pseudo-element for the hover line */
+nav ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #919F86; /* Adjust the line color */
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: left center;
+  }
+  
+  /* Animate the hover line */
+  nav ul li:hover::after {
+    transform: scaleX(1);
+  }
+  
+  
+  /* Style the CTA button */
+  .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #919F86; /* Adjust the button color */
+    color: #fff; /* Adjust the button text color */
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .cta-button:hover {
+    border: 2px solid #5b6652;
+    color: #5b6652;
+    background-color: #ffffff; /* Adjust the hover color */
+  }
+  /* Responsive Styles */
+@media (max-width: 768px) {
+    /* Stack the elements vertically for smaller screens */
+    header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* Adjust spacing for smaller screens */
+    nav ul li {
+      margin-right: 20px;
+      margin-bottom: 5px;
+      margin-top: 5px;
+    }
+  
+    /* Center align the CTA button */
+    .cta {
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+  
+  
+
+  
+
+  
+  
+  /* Hero Section Styles */
+  .hero {
+    background-image: url('images/lou-brassard-o1Dv0ELguYU-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px;
+    color: #5b6652;
+    font-family: 'krona one', sans-serif;
+    height: 300px;
+  }
+  
+  .hero-content {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+  }
+
+  .fade-in {
+    animation: fade-in-effect 1s ease-in-out forwards; /* Add the fade-in animation */
+  }
+
+  
+@keyframes fade-in-effect {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .hero-text {
+    width: 50%;
+  }
+  
+  .hero h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .hero-ctas {
+    display: flex;
+  }
+  
+  .hero-ctas .btn {
+    background-color: #919F86;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .hero-ctas .btn:hover {
+    background-color: #555; /* Adjust the hover background color */
+  }
+
+  .hero-ctas .btn-second {
+    background-color: #ffffff;
+    color: #5b6652;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: 2px solid #5b6652;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .hero-ctas .btn-second:hover {
+    color: white;
+    background-color: #919F86; /* Adjust the hover background color */
+  }
+
+  
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero {
+      padding: 50px;
+      height: 500px;
+    }
+    
+    .hero-content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .hero-text {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    
+    .hero h1 {
+      font-size: 28px;
+      
+    }
+
+    .hero h1 br {
+        display: none;
+    }
+    
+    .hero p {
+      font-size: 16px;
+    }
+    
+    .hero-ctas {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .hero-ctas .btn {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  
+ 
+  
+  /* Additional Customization and Styles */
+  
+
+  /* Section Styling */
+  .about {
+    padding: 0 0 0 0;
+    background-color: #919F86;
+  }
+
+  /* Container Styling */
+  .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0 0 100px;
+  }
+
+  /* Text Styling */
+  .about-text {
+    flex-basis: 60%;
+    padding: 10px;
+  }
+
+  .about-text h2 {
+    font-size: 32px;
+    color: #131212;
+    margin-bottom: 20px;
+    font-family: 'krona one', sans-serif;
+  }
+
+  .about-text p {
+    color: #1d1d1d;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    
+    font-size: 20px;
+  }
+
+  /* Stat Numbers Styling */
+  .stat-numbers {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  
+.stat .number {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    display: block;
+    animation: count-up 2s ease-in-out; /* Add the count-up animation */
+  }
+
+  @keyframes count-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+  .stat .label {
+    color: #ffffff;
+  }
+
+  /* Image Styling */
+  .about-image {
+    flex-basis: 40%;
+  }
+
+  .about-image img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+
+  @media screen and (max-width: 767px) {
+    /* Section Styling */
+    .about {
+      padding: 10px 0;
+      background-color: #919F86;
+    }
+  
+    /* Container Styling */
+    .about-content {
+      flex-wrap: wrap;
+      padding: 0 20px;
+    }
+  
+    /* Text Styling */
+    .about-text {
+      flex-basis: 100%;
+      margin-bottom: 40px;
+    }
+  
+    .about-text h2 {
+      font-size: 26px;
+      text-align: center;
+    }
+  
+    .about-text p {
+      text-align: center;
+    }
+  
+    /* Stat Numbers Styling */
+    .stat-numbers {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 0;
+    }
+  
+    .stat {
+      flex-basis: 33%;
+      margin-bottom: 20px;
+    }
+  
+    /* Image Styling */
+    .about-image {
+      flex-basis: 100%;
+    }
+  
+    .about-image img {
+      max-height: none;
+
+    }
+  }
+  
+
+
+
+
+  /* Services Section Styles */
+.services {
+    text-align: center; /* Center align the services section */
+    padding: 50px 100px 20px;
+  }
+
+  .services h2{
+    font-family: 'krona one', sans-serif;
+    color: #5b6652;
+  }
+  
+  .about-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Add spacing between icons and the rest of the content */
+
+  }
+  
+  .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px; /* Adjust spacing between icons */
+    background-color: #fff; /* Set background color for icons */
+    border-radius: 5px; /* Add border radius to create rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow to the background of icons */
+    padding: 10px; /* Add padding to the icons */
+  }
+  
+  
+  
+  .icon:nth-child(1) i {
+    animation-delay: 0s; /* Delay the animation for the first icon */
+  }
+  
+  .icon:nth-child(2) i {
+    animation-delay: 0.2s; /* Delay the animation for the second icon */
+  }
+  
+  .icon:nth-child(3) i {
+    animation-delay: 0.4s; /* Delay the animation for the third icon */
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0); /* Initial position */
+    }
+    50% {
+      transform: translateY(-10px); /* Bounce up position */
+    }
+    100% {
+      transform: translateY(0); /* Back to initial position */
+    }
+  }
+  
+  .icon i {
+    font-size: 50px; /* Adjust the size of the icons */
+    margin-bottom: 10px; /* Add spacing between icon and label */
+    color: #919F86; /* Adjust the color of the icons */
+    animation: bounce 2s infinite alternate;
+  }
+  
+
+  .icon:nth-child(1) i {
+    animation-delay: 0s; /* Delay the animation for the first icon */
+  }
+  
+  .icon:nth-child(2) i {
+    animation-delay: 0.2s; /* Delay the animation for the second icon */
+  }
+  
+  .icon:nth-child(3) i {
+    animation-delay: 0.4s; /* Delay the animation for the third icon */
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0); /* Initial position */
+    }
+    50% {
+      transform: translateY(-10px); /* Bounce up position */
+    }
+    100% {
+      transform: translateY(0); /* Back to initial position */
+    }
+  }
+  
+  
+  
+
+  .label {
+    font-size: 18px;
+    text-align: center;
+    color: #141414; /* Adjust the label color */
+  }
+  
+/* Media Query for Mobile */
+@media (max-width: 767px) {
+    .services {
+      display: block; /* Change to block layout for mobile */
+      text-align: center; /* Center align the content */
+      padding: 50px 20px; /* Adjust padding for mobile */
+    }
+  
+    .services h2 {
+      font-size: 24px; /* Adjust the heading font size for mobile */
+      margin-bottom: 20px; /* Add spacing below the heading */
+    }
+  
+    .about-icons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Use grid layout with automatic column fit */
+      gap: 20px; /* Adjust the gap between icons */
+      justify-content: center;
+    }
+  
+    .icon {
+      margin: 0; /* Remove margin to make use of grid gap */
+    }
+  }
+  
+
+
+
+
+
+  
+
+  .testimonial {
+    text-align: center; /* Center align the testimonial section */
+    padding: 50px 0; /* Add spacing around the testimonial section */
+  }
+  
+  .testimonial h2 {
+    font-size: 20px; /* Adjust the heading font size */
+    margin-bottom: 20px; /* Add spacing below the heading */
+    font-family: 'krona one', sans-serif;
+    color: #5b6652;
+  }
+  
+  .testimonial-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .testimonial-item {
+    max-width: 400px;
+    margin: 0 20px; /* Adjust spacing between testimonial items */
+  }
+  
+  .testimonial-content {
+    background-color: #C0D0B4;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    height: 200px;
+  }
+  
+  .testimonial-content p {
+    font-style: italic; /* Make the testimonial text italic */
+    margin-bottom: 10px; /* Add spacing below the testimonial text */
+  }
+  
+  .testimonial-author {
+    font-weight: bold; /* Make the author name bold */
+  }
+
+
+  /* Media Query for Mobile */
+@media (max-width: 767px) {
+    .testimonial {
+      padding: 30px 0; /* Adjust the padding for mobile */
+    }
+  
+    .testimonial h2 {
+      font-size: 20px; /* Adjust the heading font size for mobile */
+    }
+  
+    .testimonial-container {
+      flex-wrap: wrap; /* Allow testimonial items to wrap on multiple lines */
+    }
+  
+    .testimonial-item {
+      max-width: 100%; /* Adjust the maximum width for mobile */
+      margin: 10px 0; /* Adjust the margin for mobile */
+    }
+  }
+ 
+  
+
+
+  .footer {
+    background-color: #1c2018;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .contact-info {
+    margin-bottom: 20px;
+  }
+  
+  .contact-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .contact-info p {
+    margin-bottom: 5px;
+    color: #ffffff;
+  }
+  
+  .cta-container {
+    margin-bottom: 20px;
+  }
+  
+  .cta-container h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .newsletter-form input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .newsletter-form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .newsletter-form button:hover {
+    background-color: #555;
+  }
+  
