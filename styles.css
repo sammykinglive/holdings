@@ -23,7 +23,7 @@ header {
 
 /* Style the navigation links */
 .navbar-nav .nav-link {
-  color: #62d106; /* Link text color */
+  color: #4b5742; /* Link text color */
   font-weight: bold; /* Make the link text bold */
 }
 
@@ -33,6 +33,18 @@ header {
 }
 
 
+.navbar-collapse .btn{
+  background-color: #606d56;
+  border: none;
+  padding: 5px 20px;
+}
+
+.navbar-collapse .btn:hover{
+  background-color: #C0D0B4;
+  color: #000000;
+  font-family: 'krona one', sans-serif;
+}
+
 
 /* Style the navigation toggle button */
 .navbar-toggler {
@@ -40,7 +52,7 @@ header {
 }
 
 .navbar-toggler-icon {
-  background-color: #333; /* Color of the toggle button icon */
+  background-color: #ffffff; /* Color of the toggle button icon */
 }
 
 /* Align the navigation links to the right on larger screens */
@@ -61,6 +73,7 @@ header {
     width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
+    background-color: #4b5742;
   }
   
 }
@@ -112,6 +125,7 @@ header {
 .hero p {
   font-size: 18px;
   margin-bottom: 30px;
+  color: #000000;
 }
 
 .hero-ctas {
