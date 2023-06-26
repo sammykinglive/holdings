@@ -37,6 +37,7 @@ header {
   background-color: #606d56;
   border: none;
   padding: 5px 20px;
+  font-family: 'krona one', sans-serif;
 }
 
 .navbar-collapse .btn:hover{
@@ -104,7 +105,7 @@ header {
 @keyframes fade-in-effect {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(5px);
   }
   to {
     opacity: 1;
@@ -316,6 +317,26 @@ header {
     color: #ffffff;
   }
 
+
+  .about-cta .btn {
+    background-color: #ffffff;
+    color: #485043;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease-in-out;
+    font-family: 'krona one', sans-serif;
+  }
+  
+  .about-cta .btn:hover {
+    background-color: #3b3737; /* Adjust the hover background color */
+    font-family: 'krona one', sans-serif;
+    color: #ffffff;
+  }
+
+
+
+
   /* Image Styling */
   .about-image {
     flex-basis: 40%;
@@ -355,6 +376,10 @@ header {
   
     .about-text p {
       text-align: center;
+    }
+
+    .about-cta .btn{
+      width: 100%;
     }
   
     /* Stat Numbers Styling */
@@ -631,3 +656,56 @@ header {
     background-color: #555;
   }
   
+
+
+
+/* Styles for navigation and content */
+.scroll-function {
+  padding: 5px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+
+.scroll-function nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.scroll-function nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.scroll-function nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.scroll-function .content {
+  padding: 10px;
+}
+
+.scroll-function h1 {
+  margin-bottom: 20px;
+}
+
+.scroll-function button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.scroll-function button i {
+  margin-right: 5px;
+}
+
+.scroll-function button:hover {
+  background-color: #555;
+}
