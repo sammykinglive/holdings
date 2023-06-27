@@ -47,6 +47,25 @@ function countUpStats() {
   window.addEventListener('scroll', fadeInOnScroll);
   
 
+  $(document).ready(function () {
+    $('.navbar-toggler').click(function () {
+      $('.sidebar').toggleClass('active');
+    });
+  });
+
+
+// scroll fnc
+
+  function scrollToTop(event) {
+    event.preventDefault(); // Prevent default link behavior
+    if (window.pageYOffset > 0) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+  
+  const scrollToTopLink = document.getElementById('scrollToTopLink');
+  scrollToTopLink.addEventListener('click', scrollToTop);
+  
 
 
 
@@ -54,3 +73,32 @@ function countUpStats() {
 
 
 
+
+
+
+
+
+// About Us Page scroll function
+
+
+// Function to add bounce-in class to visible elements
+function addBounceInClass(entries, observer) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('bounce-in');
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+// Create an Intersection Observer instance
+var observer = new IntersectionObserver(addBounceInClass, {
+  root: null,
+  threshold: 0.2, // Adjust this threshold as needed
+});
+
+// Observe each "about" div
+var aboutDivs = document.querySelectorAll('.about-div');
+aboutDivs.forEach(function (div) {
+  observer.observe(div);
+});
